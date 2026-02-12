@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     margin: 0;
 }
 
@@ -14,7 +14,11 @@ h2 {
 }
 
 header {
-    height: 5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: max-content;
+    padding-left: 3vw;
 }
 
 #landing {
@@ -23,11 +27,12 @@ header {
     padding-right: 15vw;
     display: flex;
     align-items: center;
-    height: calc(100vh - 5vh);
+    height: calc(100vh - 8vh);
 }
 
 nav {
     height: 100%;
+
     ul {
         display: flex;
         justify-content: flex-end;
@@ -36,7 +41,7 @@ nav {
     }
 
     ul li {
-        padding: 3vw;
+        padding: 3vh;
     }
 }
 
@@ -53,6 +58,16 @@ a:selected {
     color: #ff6464;
 }
 
+.home-icon img {
+    width: 24px;
+    height: 24px;
+}
+
+.home-icon:hover img {
+    filter: brightness(0) saturate(100%) invert(48%) sepia(79%) saturate(2476%)
+        hue-rotate(336deg) brightness(100%) contrast(101%);
+}
+
 #landing-title-and-photo {
     display: flex;
     justify-content: space-around;
@@ -65,7 +80,7 @@ a:selected {
 
     a {
         padding: 8px;
-        border-radius:  7px;
+        border-radius: 7px;
         background-color: #ff6464;
         width: max-content;
         color: white;
@@ -78,7 +93,7 @@ a:selected {
     object-fit: cover;
     border-radius: 50%;
     align-self: center;
-    box-shadow: -6px 10px 1px 2px #b6e5f07c;;
+    box-shadow: -6px 10px 1px 2px #b6e5f07c;
 }
 
 .section-headers {
