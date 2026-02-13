@@ -10,14 +10,25 @@
             href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
             rel="stylesheet"
         />
+        <script src="index.js"></script>
         <title>John - Designer</title>
     </head>
     <body>
-        <header>
+        <header class="site-header">
             <a href="./index.html" class="home-icon">
-                <img src="./img/logos/home.svg" alt="home" />
+                <img src="./img/logos/home.svg" alt="home" class="active"/>
             </a>
-            <nav>
+            <button
+                class="nav-toggle"
+                aria-expanded="false"
+                aria-controls="primary-nav"
+            >
+                <span class="sr-only">Menu</span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav id="primary-nav" class="site-nav">
                 <ul>
                     <li>
                         <a href="./works.html">Works</a>
