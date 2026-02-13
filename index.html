@@ -10,14 +10,25 @@
             href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
             rel="stylesheet"
         />
+        <script src="index.js"></script>
         <title>John - Designer</title>
     </head>
     <body>
-        <header>
+        <header class="site-header">
             <a href="./index.html" class="home-icon">
-                <img src="./img/logos/home.svg" alt="home" />
+                <img src="./img/logos/home.svg" alt="home" class="active"/>
             </a>
-            <nav>
+            <button
+                class="nav-toggle"
+                aria-expanded="false"
+                aria-controls="primary-nav"
+            >
+                <span class="sr-only">Menu</span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav id="primary-nav" class="site-nav">
                 <ul>
                     <li>
                         <a href="./works.html">Works</a>
@@ -36,12 +47,12 @@
             <div id="landing-title-and-photo">
                 <div id="landing-title-subtitle">
                     <h1>Hi, I am John, Creative Technologist</h1>
-                    <h2>
+                    <p>
                         Amet minim mollit non deserunt ullamco est sit aliqua
                         dolor do amet sint. Velit officia consequat duis enim
                         velit mollit. Exercitation veniam consequat sunt nostrud
                         amet.
-                    </h2>
+                    </p>
                     <a href="./docs/johns-resume.pdf">Download resume</a>
                 </div>
                 <img
@@ -107,7 +118,7 @@
             <div class="content-summary">
                 <img
                     src="./img/vibrant-portrait-illustration.jpeg"
-                    alt="vibran portrait Illustration"
+                    alt="vibrant portrait illustration"
                     class="content-summary-image"
                 />
                 <div class="content-summary-content">

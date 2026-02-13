@@ -19,6 +19,35 @@ header {
     align-items: center;
     height: max-content;
     padding-left: 3vw;
+    padding-right: 3vw;
+}
+
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.nav-toggle .bar {
+    display: block;
+    width: 24px;
+    height: 2px;
+    margin: 4px 0;
+    background: #21233d;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 
 #landing {
@@ -50,11 +79,11 @@ a {
     color: black;
 }
 
-a:hover {
+a.active {
     color: #ff6464;
 }
 
-a:selected {
+a:hover {
     color: #ff6464;
 }
 
@@ -64,6 +93,11 @@ a:selected {
 }
 
 .home-icon:hover img {
+    filter: brightness(0) saturate(100%) invert(48%) sepia(79%) saturate(2476%)
+        hue-rotate(336deg) brightness(100%) contrast(101%);
+}
+
+.home-icon img.active {
     filter: brightness(0) saturate(100%) invert(48%) sepia(79%) saturate(2476%)
         hue-rotate(336deg) brightness(100%) contrast(101%);
 }
@@ -108,6 +142,7 @@ a:selected {
     background-color: #edf6f9;
     display: flex;
     flex-direction: column;
+    padding-bottom: 7vh;
 
     a {
         color: #00a8cc;
@@ -140,11 +175,12 @@ a:selected {
     height: 30vh;
 
     img {
-        width: 20%;
-        height: 80%;
+        width: 25vh;
+        height: 20vh;
         border-radius: 5px;
         object-fit: cover;
     }
+
     .content-summary-content {
         padding: 3vw;
         flex: 1;
@@ -174,7 +210,7 @@ a:selected {
 
     img {
         width: 20%;
-        height: 80%;
+        height: 50%;
         border-radius: 5px;
         object-fit: cover;
     }
@@ -215,35 +251,46 @@ footer {
 }
 
 @media (orientation: portrait) {
-    #landing {
-        text-align: left;
-        padding-left: 15vw;
-        padding-right: 15vw;
-        display: flex;
-        align-items: center;
-        flex-direction: column-reverse;
-        height: calc(100vh - 8vh);
+    .nav-toggle {
+        display: block;
     }
-
+    header {
+        position: relative;
+    }
     nav {
-        height: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        display: none;
 
         ul {
-            display: flex;
-            justify-content: flex-end;
-            list-style: none;
-            margin: 0vw;
+            flex-direction: column;
+            align-items: center;
+            padding: 1vh 0;
+            background-color: white;
         }
 
         ul li {
-            padding: 3vh;
+            padding: 2vh;
         }
+    }
+
+    header.nav-open nav {
+        display: block;
+    }
+
+    #landing {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        text-align: center;
     }
 
     #landing-title-and-photo {
         display: flex;
         flex-direction: column-reverse;
-        justify-content: space-around;
 
         #landing-title-subtitle {
             display: flex;
@@ -252,11 +299,7 @@ footer {
         }
 
         a {
-            padding: 8px;
-            border-radius: 7px;
-            background-color: #ff6464;
-            width: max-content;
-            color: white;
+            align-self: center;
         }
     }
 
@@ -266,47 +309,30 @@ footer {
     }
 
     .content-summary {
-        display: flex;
         align-items: center;
-        border-bottom: 1px solid rgb(168, 168, 168);
-        padding: 3vw;
         flex-direction: column;
+        height: max-content;
+        padding-top: 10vw;
 
         img {
-            width: 20%;
-            height: 80%;
+            width: 25vh;
+            height: 20vh;
             border-radius: 5px;
             object-fit: cover;
         }
+
         .content-summary-content {
-            padding: 3vw;
-            flex: 1;
-            display: flex;
             flex-direction: column;
-
-            .year {
-                background-color: #132850;
-                color: white;
-                padding: 6px;
-                border-radius: 20px;
-            }
-
-            .work-type {
-                padding: 4px;
-                color: rgb(128, 142, 143);
-            }
         }
     }
 
     .blog-content-summary {
-        display: flex;
         align-items: center;
-        border-bottom: 1px solid rgb(168, 168, 168);
-        padding: 3vw;
         flex-direction: column;
+        height: max-content;
 
         img {
-            width: 20%;
+            width: 80%;
             height: 80%;
             border-radius: 5px;
             object-fit: cover;
