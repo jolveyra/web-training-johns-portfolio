@@ -109,13 +109,13 @@ a:hover {
 }
 
 .home-icon:hover img {
-    filter: brightness(0) saturate(100%) invert(48%) sepia(79%) saturate(2476%)
-        hue-rotate(336deg) brightness(100%) contrast(101%);
+    filter: brightness(0) saturate(80%) invert(27%) sepia(82%) saturate(2300%)
+        hue-rotate(336deg) brightness(85%) contrast(101%);
 }
 
 .home-icon img.active {
-    filter: brightness(0) saturate(100%) invert(48%) sepia(79%) saturate(2476%)
-        hue-rotate(336deg) brightness(100%) contrast(101%);
+    filter: brightness(0) saturate(80%) invert(27%) sepia(82%) saturate(2300%)
+        hue-rotate(336deg) brightness(85%) contrast(101%);
 }
 
 .hero-title-and-photo {
