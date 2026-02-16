@@ -91,11 +91,11 @@ a {
 }
 
 a.active {
-    color: #ff6464;
+    color: #cf4545;
 }
 
 a:hover {
-    color: #ff6464;
+    color: #cf4545;
 }
 
 .home-icon img {
@@ -103,14 +103,19 @@ a:hover {
     height: 24px;
 }
 
+.home-icon:focus-visible {
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
 .home-icon:hover img {
-    filter: brightness(0) saturate(100%) invert(48%) sepia(79%) saturate(2476%)
-        hue-rotate(336deg) brightness(100%) contrast(101%);
+    filter: brightness(0) saturate(80%) invert(27%) sepia(82%) saturate(2300%)
+        hue-rotate(336deg) brightness(85%) contrast(101%);
 }
 
 .home-icon img.active {
-    filter: brightness(0) saturate(100%) invert(48%) sepia(79%) saturate(2476%)
-        hue-rotate(336deg) brightness(100%) contrast(101%);
+    filter: brightness(0) saturate(80%) invert(27%) sepia(82%) saturate(2300%)
+        hue-rotate(336deg) brightness(85%) contrast(101%);
 }
 
 .hero-title-and-photo {
@@ -121,9 +126,9 @@ a:hover {
 .hero-title-and-photo a {
     padding: 0.8rem;
     border-radius: 5px;
-    background-color: #ff6464;
+    background-color: #cf4545;
     width: max-content;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 .hero-title-subtitle {
@@ -149,7 +154,7 @@ a:hover {
 }
 
 .section-headers a {
-    color: #00a8cc;
+    color: #075e74;
     font-size: 0.98rem;
 }
 
@@ -171,9 +176,10 @@ a:hover {
     padding: 0rem 1rem;
     margin: 1rem;
     border-radius: 7px;
-    span {
-        font-size: 0.9rem;
-    }
+}
+
+.post-card span {
+    font-size: 0.9rem;
 }
 
 .content-summary {
@@ -208,7 +214,7 @@ a:hover {
 
 .content-summary-content .work-type {
     padding: 0.35rem;
-    color: rgb(128, 142, 143);
+    color: rgb(101, 111, 112);
 }
 
 .blog-content-summary {
@@ -241,7 +247,7 @@ a:hover {
 
 .blog-content-summary .blog-content-summary-content .work-type {
     padding: 4px;
-    color: rgb(128, 142, 143);
+    color: rgb(101, 111, 112);
 }
 
 footer {
