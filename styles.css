@@ -13,13 +13,18 @@ h2 {
     color: #21233d;
 }
 
+section {
+    padding-left: 12vw;
+    padding-right: 12vw;
+}
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: max-content;
-    padding-left: 3vw;
-    padding-right: 3vw;
+    padding-left: 3rem;
+    padding-right: 3rem;
 }
 
 .nav-toggle {
@@ -40,10 +45,10 @@ header {
 
 .sr-only {
     position: absolute;
-    width: 1px;
-    height: 1px;
+    width: 1rem;
+    height: 1rem;
     padding: 0;
-    margin: -1px;
+    margin: -1rem;
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
@@ -56,7 +61,7 @@ header {
     padding-right: 15vw;
     display: flex;
     align-items: center;
-    height: calc(100vh - 8vh);
+    height: calc(100vh - 6.5vh);
 
     p {
         font-size: large;
@@ -70,11 +75,11 @@ nav {
         display: flex;
         justify-content: flex-end;
         list-style: none;
-        margin: 0vw;
+        margin: 0rem;
     }
 
     ul li {
-        padding: 3vh;
+        padding: 2rem;
     }
 }
 
@@ -118,7 +123,7 @@ a:hover {
     }
 
     a {
-        padding: 8px;
+        padding: 0.8rem;
         border-radius: 5px;
         background-color: #ff6464;
         width: max-content;
@@ -139,38 +144,40 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin: 0rem 1rem;
+
+    h2 {
+        font-size: 1.2rem;
+        font-weight: 300;
+    }
 }
 
 #recent-posts {
-    padding-left: 15vw;
-    padding-right: 15vw;
     background-color: #edf6f9;
     display: flex;
     flex-direction: column;
-    padding-bottom: 7vh;
+    padding-bottom: 2rem;
+}
 
-    a {
-        color: #00a8cc;
-    }
+#recent-posts a {
+    color: #00a8cc;
+}
 
-    #cards {
-        display: flex;
-    }
+.card-group {
+    display: flex;
 }
 
 .post-card {
     background-color: white;
-    padding: 3vw;
-    margin: 1vw;
-    border-radius: 10px;
+    padding: 0rem 1rem;
+    margin: 1rem;
+    border-radius: 7px;
     span {
         font-size: 0.9rem;
     }
 }
 
 #featured-works {
-    padding-left: 15vw;
-    padding-right: 15vw;
     display: flex;
     flex-direction: column;
 }
@@ -179,31 +186,31 @@ a:hover {
     display: flex;
     align-items: center;
     border-bottom: 1px solid rgb(168, 168, 168);
-    padding: 3vw;
-    height: 30vh;
+    padding: 0rem 1rem;
+    height: 25rem;
 
     img {
-        width: 25vh;
-        height: 20vh;
+        width: 20rem;
+        height: 15rem;
         border-radius: 5px;
         object-fit: cover;
     }
 
     .content-summary-content {
-        padding: 3vw;
         flex: 1;
         display: flex;
         flex-direction: column;
+        padding: 0rem 1rem;
 
         .year {
             background-color: #132850;
             color: white;
-            padding: 6px;
-            border-radius: 20px;
+            padding: 0.35rem;
+            border-radius: 14px;
         }
 
         .work-type {
-            padding: 4px;
+            padding: 0.35rem;
             color: rgb(128, 142, 143);
         }
     }
@@ -213,8 +220,8 @@ a:hover {
     display: flex;
     align-items: center;
     border-bottom: 1px solid rgb(168, 168, 168);
-    padding: 3vw;
-    height: 30vh;
+    padding: 0rem 1rem;
+    height: 15rem;
 
     img {
         width: 20%;
@@ -223,7 +230,7 @@ a:hover {
         object-fit: cover;
     }
     .content-summary-content {
-        padding: 3vw;
+        padding: 1rem 0rem;
         flex: 1;
         display: flex;
         flex-direction: column;
@@ -311,7 +318,7 @@ footer {
         }
     }
 
-    #cards {
+    .card-group {
         display: flex;
         flex-direction: column;
     }
