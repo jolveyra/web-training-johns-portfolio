@@ -103,6 +103,11 @@ a:hover {
     height: 24px;
 }
 
+.home-icon:focus-visible {
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
 .home-icon:hover img {
     filter: brightness(0) saturate(100%) invert(48%) sepia(79%) saturate(2476%)
         hue-rotate(336deg) brightness(100%) contrast(101%);
